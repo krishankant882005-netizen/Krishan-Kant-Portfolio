@@ -98,7 +98,7 @@ const projects = [
     description:
       "A campus-focused application concept connecting students through marketplace listings, rentals, rides, study partners, food splitting, fitness partners and community activities.",
     tags: ["Flutter", "App Development", "UI/UX"],
-    link: "https://github.com/krishankant882005-netizen"
+    link: "https://github.com/krishankant882005-netizen/Campus-Circle"
   },
   {
     number: "02",
@@ -107,7 +107,7 @@ const projects = [
     description:
       "A learning-focused machine learning project exploring Python-based data processing, model development and practical machine learning workflows.",
     tags: ["Python", "Machine Learning", "AI"],
-    link: "https://github.com/krishankant882005-netizen"
+    link: "https://github.com/krishankant882005-netizen/Machine-Learning-with-Python"
   },
   {
     number: "03",
@@ -116,7 +116,7 @@ const projects = [
     description:
       "A C++ programming project focused on parsing and evaluating expressions while strengthening algorithmic thinking, logic and data-structure fundamentals.",
     tags: ["C++", "DSA", "Algorithms"],
-    link: "https://github.com/krishankant882005-netizen"
+    link: "https://github.com/krishankant882005-netizen/Expression-Evaluator"
   },
   {
     number: "04",
@@ -125,7 +125,7 @@ const projects = [
     description:
       "A structured software solution focused on attendance management, system design, requirements analysis and software engineering practices.",
     tags: ["Software Engineering", "System Design", "UML"],
-    link: "https://github.com/krishankant882005-netizen"
+    link: "https://github.com/krishankant882005-netizen/Attendance-Management-System"
   }
 ];
 
@@ -467,11 +467,101 @@ function App() {
         <section
           id="home"
           className="hero section"
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            position: "relative",
+            paddingTop: "90px",
+            paddingBottom: "90px"
+          }}
         >
 
-          <div className="hero-left reveal">
+          {/* Profile photo — centered above the introduction */}
+          <div
+            className="hero-right reveal"
+            style={{
+              order: 1,
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginBottom: "10px"
+            }}
+          >
+            <div
+              className="profile-frame"
+              style={{
+                position: "relative",
+                width: "220px",
+                height: "220px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <div
+                className="frame-glow"
+                style={{
+                  position: "absolute",
+                  inset: "-8px",
+                  borderRadius: "50%",
+                  background:
+                    "linear-gradient(135deg, #6c63ff 0%, #a855f7 50%, #ec4899 100%)",
+                  zIndex: 0
+                }}
+              />
 
-            <div className="availability">
+              <div
+                className="portrait-placeholder"
+                style={{
+                  position: "relative",
+                  zIndex: 1,
+                  width: "100%",
+                  height: "100%",
+                  padding: "7px",
+                  borderRadius: "50%",
+                  background: "#ffffff",
+                  boxSizing: "border-box"
+                }}
+              >
+                <img
+                  src="/krishan-kant-profile.jpeg"
+                  alt="Krishan Kant"
+                  className="profile-photo"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    display: "block"
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="hero-left reveal"
+            style={{
+              order: 2,
+              width: "100%",
+              maxWidth: "900px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center"
+            }}
+          >
+
+            <div
+              className="availability"
+              style={{ display: "none" }}
+            >
               <span />
               Open to learning & opportunities
             </div>
@@ -480,7 +570,14 @@ function App() {
               HELLO, I'M
             </p>
 
-            <h1>
+            <h1
+              style={{
+                marginTop: "4px",
+                marginBottom: "18px",
+                lineHeight: "0.98",
+                fontSize: "clamp(3.6rem, 7.5vw, 5.5rem)"
+              }}
+            >
               Krishan
               <br />
               <em>Kant</em>
@@ -550,39 +647,10 @@ function App() {
 
           </div>
 
-          <div className="hero-right reveal delay">
-
-            <div className="profile-frame">
-
-              <div className="frame-glow" />
-
-              <div className="portrait-placeholder">
-
-                <img
-                  src="/krishan-kant-profile.jpeg"
-                  alt="Krishan Kant"
-                  className="profile-photo"
-                />
-
-              </div>
-
-              <div className="floating-chip chip-one">
-                <Code2 size={16} />
-                Software
-              </div>
-
-              <div className="floating-chip chip-two">
-                <BrainCircuit size={16} />
-                AI / ML
-              </div>
-
-            </div>
-
-          </div>
-
           <a
             className="scroll-cue"
             href="#about"
+            style={{ order: 3 }}
           >
             <span />
             Scroll to explore

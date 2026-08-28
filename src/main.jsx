@@ -475,8 +475,8 @@ function App() {
             justifyContent: "center",
             textAlign: "center",
             position: "relative",
-            paddingTop: "90px",
-            paddingBottom: "90px"
+            paddingTop: "55px",
+            paddingBottom: "55px"
           }}
         >
 
@@ -489,7 +489,7 @@ function App() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              marginBottom: "10px"
+              marginBottom: "4px"
             }}
           >
             <div
@@ -566,7 +566,7 @@ function App() {
               Open to learning & opportunities
             </div>
 
-            <p className="mini-label">
+            <p className="mini-label" style={{ color: "#e8e8e8", opacity: 1 }}>
               HELLO, I'M
             </p>
 
@@ -673,21 +673,15 @@ function App() {
 
             <div>
 
-              <p>WHO I AM</p>
-
-              <h2>
-                Building toward
-                <br />
-                <em>AI & software.</em>
-              </h2>
+              <p style={{ color: "#eeeeee", opacity: 1 }}>WHO I AM</p>
 
             </div>
 
           </div>
 
-          <div className="about-layout">
+          <div className="about-layout" style={{ width: "100%", maxWidth: "none", display: "block" }}>
 
-            <div className="about-lead">
+            <div className="about-lead" style={{ width: "100%", maxWidth: "none" }}>
 
               <p>
                 I'm a B.Tech CSE (AI & ML) student at
@@ -732,7 +726,7 @@ function App() {
 
             <div>
 
-              <p>WHAT I WORK WITH</p>
+              <p style={{ color: "#eeeeee", opacity: 1 }}>WHAT I WORK WITH</p>
 
               <h2>
                 Skills & <em>tools.</em>
@@ -778,17 +772,17 @@ function App() {
 
           </div>
 
-          <div className="soft-wrap">
+          <div className="soft-wrap" style={{ width: "100%", marginTop: "26px", padding: "24px 26px", border: "1px solid rgba(255,255,255,0.16)", borderRadius: "18px", background: "linear-gradient(135deg, rgba(132,204,22,0.10), rgba(168,85,247,0.08))", boxShadow: "0 14px 40px rgba(0,0,0,0.18)", boxSizing: "border-box" }}>
 
             <span className="soft-label">
               SOFT SKILLS
             </span>
 
-            <div className="soft-list">
+            <div className="soft-list" style={{ display: "flex", flexWrap: "wrap", gap: "12px", width: "100%" }}>
 
               {softSkills.map((s) => (
 
-                <span key={s}>
+                <span key={s} style={{ color: "#ffffff", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(183,255,42,0.28)", borderRadius: "999px", padding: "11px 17px", fontWeight: 600, fontSize: "14px", lineHeight: 1.3 }}>
                   {s}
                 </span>
 
@@ -815,7 +809,7 @@ function App() {
 
             <div>
 
-              <p>SELECTED WORK</p>
+              <p style={{ color: "#eeeeee", opacity: 1 }}>SELECTED WORK</p>
 
               <h2>
                 Projects & <em>experiments.</em>
@@ -899,7 +893,7 @@ function App() {
 
             <div>
 
-              <p>MY JOURNEY</p>
+              <p style={{ color: "#eeeeee", opacity: 1 }}>MY JOURNEY</p>
 
               <h2>
                 Education & <em>growth.</em>
@@ -1027,7 +1021,7 @@ function App() {
             className="muted"
             style={{
               maxWidth: "720px",
-              marginBottom: "40px"
+              marginBottom: "26px"
             }}
           >
             Selected certifications and learning
@@ -1042,7 +1036,7 @@ function App() {
               display: "grid",
               gridTemplateColumns:
                 "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "24px"
+              gap: "18px"
             }}
           >
 
@@ -1094,7 +1088,7 @@ function App() {
 
                 <div
                   style={{
-                    padding: "22px",
+                    padding: "18px",
                     display: "flex",
                     flexDirection: "column",
                     flex: 1
@@ -1123,7 +1117,7 @@ function App() {
                     <span
                       style={{
                         fontSize: "12px",
-                        opacity: 0.5
+                        opacity: 0.8
                       }}
                     >
                       {String(i + 1).padStart(2, "0")}
@@ -1156,7 +1150,7 @@ function App() {
                       <p
                         style={{
                           margin: 0,
-                          opacity: 0.65
+                          opacity: 1
                         }}
                       >
                         {cert.issuer}
@@ -1172,7 +1166,7 @@ function App() {
                     rel="noreferrer"
                     className="certificate-view"
                     style={{
-                      marginTop: "20px",
+                      marginTop: "14px",
                       display: "inline-flex",
                       alignItems: "center",
                       gap: "7px"
@@ -1195,73 +1189,283 @@ function App() {
         {/* =================================================
             CONTACT
         ================================================= */}
-
         <section
           id="contact"
           className="section contact-section"
+          style={{
+            paddingTop: "70px",
+            paddingBottom: "70px"
+          }}
         >
+          <div
+            className="contact-layout"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "minmax(0, 1fr) minmax(360px, 520px)",
+              gap: "56px",
+              alignItems: "start",
+              width: "100%"
+            }}
+          >
+            <div>
+              <div
+                className="section-title compact"
+                style={{ marginBottom: "28px" }}
+              >
+                <span>06</span>
+                <div>
+                  <p style={{ color: "#eeeeee", opacity: 1 }}>CONTACT</p>
+                  <h2>
+                    Get In <em>Touch</em>
+                  </h2>
+                </div>
+              </div>
 
-          <div className="contact-card">
+              <p
+                className="muted"
+                style={{
+                  maxWidth: "620px",
+                  fontSize: "1.05rem",
+                  lineHeight: 1.75,
+                  marginBottom: "32px"
+                }}
+              >
+                I'm currently open for software engineering internships,
+                entry-level opportunities, collaborations and interesting
+                software and AI/ML projects. Whether you have a question,
+                an exciting project, or just want to connect, feel free
+                to reach out!
+              </p>
 
-            <div className="contact-kicker">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "18px"
+                }}
+              >
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="contact-info-link"
+                >
+                  <span className="contact-icon">
+                    <Mail size={19} />
+                  </span>
+                  <span>
+                    <strong className="contact-item-title">Email</strong>
+                    <span className="contact-item-link">
+                      {profile.email}
+                    </span>
+                  </span>
+                </a>
 
-              <Sparkles size={15} />
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-info-link"
+                >
+                  <span className="contact-icon">
+                    <Linkedin size={19} />
+                  </span>
+                  <span>
+                    <strong className="contact-item-title">LinkedIn</strong>
+                    <span className="contact-item-link">
+                      linkedin.com/in/krishan-kant-9b8618379
+                    </span>
+                  </span>
+                </a>
 
-              LET'S BUILD SOMETHING
-
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-info-link"
+                >
+                  <span className="contact-icon">
+                    <Github size={19} />
+                  </span>
+                  <span>
+                    <strong className="contact-item-title">GitHub</strong>
+                    <span className="contact-item-link">
+                      github.com/krishankant882005-netizen
+                    </span>
+                  </span>
+                </a>
+              </div>
             </div>
 
-            <h2>
-              Have an idea?
-              <br />
-              <em>Let's make it real.</em>
-            </h2>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
 
-            <p>
-              I'm open to learning, collaborating and
-              working on interesting software and AI/ML
-              projects.
-            </p>
+                const form = e.currentTarget;
+                const name = form.elements.name.value.trim();
+                const email = form.elements.email.value.trim();
+                const subject =
+                  form.elements.subject.value.trim() ||
+                  "Portfolio Inquiry";
+                const message = form.elements.message.value.trim();
 
-            <a
-              className="button primary"
-              href={`mailto:${profile.email}`}
+                const body =
+                  `Name: ${name}\n` +
+                  `Email: ${email}\n\n` +
+                  `${message}`;
+
+                window.location.href =
+                  `mailto:${profile.email}` +
+                  `?subject=${encodeURIComponent(subject)}` +
+                  `&body=${encodeURIComponent(body)}`;
+              }}
+              style={{
+                padding: "28px",
+                border: "1px solid rgba(255,255,255,0.12)",
+                borderRadius: "18px",
+                background: "rgba(255,255,255,0.045)",
+                boxShadow: "0 18px 50px rgba(0,0,0,0.18)"
+              }}
             >
-              Start a conversation
-              <Mail size={17} />
-            </a>
+              <div style={{ display: "grid", gap: "20px" }}>
+                <label className="contact-field">
+                  Your Name
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                  />
+                </label>
 
-            <div className="contact-links">
+                <label className="contact-field">
+                  Your Email
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </label>
 
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github size={17} />
-                GitHub
-              </a>
+                <label className="contact-field">
+                  Subject
+                  <input
+                    name="subject"
+                    type="text"
+                    placeholder="Internship Opportunity / Inquiry"
+                  />
+                </label>
 
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Linkedin size={17} />
-                LinkedIn
-              </a>
+                <label className="contact-field">
+                  Message
+                  <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Hello Krishan, I would like to discuss..."
+                    required
+                  />
+                </label>
 
-              <a
-                href={`mailto:${profile.email}`}
-              >
-                <Mail size={17} />
-                Email
-              </a>
-
-            </div>
-
+                <button
+                  type="submit"
+                  className="button primary"
+                  style={{
+                    width: "100%",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                    border: "0"
+                  }}
+                >
+                  Send Message
+                  <Mail size={17} />
+                </button>
+              </div>
+            </form>
           </div>
 
+          <style>{`
+            .contact-layout {
+              width: 100%;
+            }
+
+            .contact-info-link {
+              display: flex;
+              align-items: center;
+              gap: 16px;
+              text-decoration: none;
+              width: fit-content;
+            }
+
+            .contact-icon {
+              width: 48px;
+              height: 48px;
+              min-width: 48px;
+              border: 1px solid rgba(183,255,36,0.20);
+              border-radius: 12px;
+              display: grid;
+              place-items: center;
+              color: #b7ff24;
+              background: rgba(183,255,36,0.055);
+            }
+
+            .contact-item-title {
+              display: block;
+              font-size: 14px;
+              color: #ffffff;
+              margin-bottom: 3px;
+            }
+
+            .contact-item-link {
+              display: block;
+              font-size: 15px;
+              color: #b7ff24;
+              word-break: break-word;
+            }
+
+            .contact-field {
+              display: grid;
+              gap: 8px;
+              font-size: 14px;
+              font-weight: 600;
+              color: #ffffff;
+            }
+
+            .contact-field input,
+            .contact-field textarea {
+              width: 100%;
+              box-sizing: border-box;
+              padding: 14px 16px;
+              border-radius: 10px;
+              border: 1px solid rgba(255,255,255,0.14);
+              background: rgba(0,0,0,0.28);
+              color: #ffffff;
+              outline: none;
+              font-size: 15px;
+              font-family: inherit;
+            }
+
+            .contact-field textarea {
+              resize: vertical;
+              min-height: 120px;
+            }
+
+            .contact-field input::placeholder,
+            .contact-field textarea::placeholder {
+              color: rgba(255,255,255,0.48);
+            }
+
+            .contact-field input:focus,
+            .contact-field textarea:focus {
+              border-color: rgba(183,255,36,0.65);
+              box-shadow: 0 0 0 3px rgba(183,255,36,0.08);
+            }
+
+            @media (max-width: 820px) {
+              .contact-layout {
+                grid-template-columns: 1fr !important;
+                gap: 38px !important;
+              }
+            }
+          `}</style>
         </section>
 
       </main>

@@ -605,14 +605,13 @@ function App() {
               </a>
 
               <a
-                className="button ghost"
-                href="/Krishan-Kant-Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Download Resume
-                <Download size={17} />
-              </a>
+  className="button ghost"
+  href={`${import.meta.env.BASE_URL}KKLPU.docx`}
+  download="KKLPU.docx"
+>
+  Download Resume
+  <Download size={17} />
+</a>
 
             </div>
 
@@ -1007,7 +1006,7 @@ function App() {
 
             <div>
 
-              <p>CONTINUOUS LEARNING</p>
+              <p style={{ color: "#ffffff", opacity: 1 }}>CONTINUOUS LEARNING</p>
 
               <h2>
                 Certificates & <em>courses.</em>
@@ -1292,6 +1291,21 @@ function App() {
                     </span>
                   </span>
                 </a>
+
+                <a
+                  href="tel:8445430302"
+                  className="contact-info-link"
+                >
+                  <span className="contact-icon">
+                    <Smartphone size={19} />
+                  </span>
+                  <span>
+                    <strong className="contact-item-title">Contact</strong>
+                    <span className="contact-item-link">
+                      8445430302
+                    </span>
+                  </span>
+                </a>
               </div>
             </div>
 
@@ -1312,10 +1326,17 @@ function App() {
                   `Email: ${email}\n\n` +
                   `${message}`;
 
-                window.location.href =
-                  `mailto:${profile.email}` +
-                  `?subject=${encodeURIComponent(subject)}` +
+                const gmailComposeUrl =
+                  "https://mail.google.com/mail/?view=cm&fs=1" +
+                  `&to=${encodeURIComponent(profile.email)}` +
+                  `&su=${encodeURIComponent(subject)}` +
                   `&body=${encodeURIComponent(body)}`;
+
+                window.open(
+                  gmailComposeUrl,
+                  "_blank",
+                  "noopener,noreferrer"
+                );
               }}
               style={{
                 padding: "28px",
